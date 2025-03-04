@@ -1,6 +1,12 @@
 {
-  "title": "Test",
-  "slug": "test",
+  "title": "test",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "fieldName": {
+      "required": false,
+      "fieldType": "Text",
+      "dataType": "string",
+      "title": "Field name"
+    }
+  }
 }
