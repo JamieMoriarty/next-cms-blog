@@ -1,0 +1,23 @@
+{
+  "commit": "",
+  "generated": "2025-03-04T20:54:12.558Z",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "1162733143",
+        "path": "outstatic/content/test/test.mdx"
+      },
+      "author": {
+        "name": "Martin Løyche",
+        "picture": ""
+      },
+      "collection": "test",
+      "fieldName": "hey there",
+      "publishedAt": "2025-03-04T20:59:39.205Z",
+      "slug": "test",
+      "status": "draft",
+      "title": ""
+    }
+  ]
+}
