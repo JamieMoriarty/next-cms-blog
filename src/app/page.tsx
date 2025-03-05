@@ -12,7 +12,7 @@ export default async function Home() {
   );
 }
 
-export async function fetchData() {
+async function fetchData() {
   const sbParams: ISbStoriesParams = { version: "draft" };
 
   const storyblokApi: StoryblokClient = getStoryblokApi();
