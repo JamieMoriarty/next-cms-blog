@@ -29,8 +29,12 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Project specifics
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For using StoryBlok against local dev a https proxy is neeeded. Follow the steps [here](https://www.storyblok.com/faq/setup-dev-server-https-proxy) to set up your local env and then run
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+npx local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem
+```
+
+to start the proxy.
