@@ -2,11 +2,16 @@ import {
   storyblokEditable,
   StoryblokServerComponent,
 } from "@storyblok/react/rsc";
+import { GridStoryblok } from "../integrations/storyblok/contentModel";
 
-const Grid = ({ blok }) => {
+interface GridProps {
+  blok: GridStoryblok;
+}
+
+const Grid = ({ blok }: GridProps) => {
   return (
     <div {...storyblokEditable(blok)}>
-      {blok.columns.map((nestedBlok) => (
+      {blok.columns?.map((nestedBlok) => (
         <StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
     </div>
