@@ -129,12 +129,21 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Content editing
+### Content editing against local
 
-To use the visual editor, we need a local https proxy. Follow the steps [here](https://www.storyblok.com/faq/setup-dev-server-https-proxy) to set up your local env and then run with the following command:
+Chief problem to solve to get the visual editor to work against the local development environment is that https is required, everything else will just work. Fortunately, it's not a big problem, but requires a couple of tools installed:
+
+- [just](https://just.systems/) (might be better use [just-install](https://www.npmjs.com/package/just-install) instead, we'll see)
+- [mkcert](https://github.com/FiloSottile/mkcert)
+
+If you have not set-up mkcert previously, then make sure to run
 
 ```
-npx local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem
+mkcert --install
 ```
 
-Open [http://localhost:3010](http://localhost:3010) with your browser to see the result.
+For convenience, a `justfile` has been added with a command for starting both the local dev env and the https proxy. With `just` installed, run
+
+```
+just run-with-https
+```
