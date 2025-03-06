@@ -11,5 +11,5 @@ export default function StoryblokProvider({
 }: StoryblokProviderProps) {
   getStoryblokApi();
 
-  return <>{children}</>;
+  return children;
 }
