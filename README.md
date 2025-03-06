@@ -109,6 +109,14 @@ const eslintConfig = [
 ];
 ```
 
+### Sentry configuration
+
+WHEN you set the actual project, remember to add the Sentry configuration! To do that, use this thing:
+
+```
+npx @sentry/wizard@latest -i nextjs --saas --org chill-development --project javascript-nextjs
+```
+
 ## Running
 
 ### Local developments
