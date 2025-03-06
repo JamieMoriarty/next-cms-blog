@@ -28,7 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.mjs",
-    "src/components/Page.tsx"
+    "src/components/bloks/PageBlok.tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,12 +1,9 @@
 import { TeaserStoryblok } from "@/integrations/storyblok/contentModel";
 import { storyblokEditable } from "@storyblok/react/rsc";
+import { BLokComponentProps } from "../props";
 
-interface TeaserProps {
-  blok: TeaserStoryblok;
-}
-
-const Teaser = ({ blok }: TeaserProps) => {
+const TeaserBlok = ({ blok }: BLokComponentProps<TeaserStoryblok>) => {
   return <h2 {...storyblokEditable(blok)}>{blok.headline}</h2>;
 };
 
-export default Teaser;
+export default TeaserBlok;

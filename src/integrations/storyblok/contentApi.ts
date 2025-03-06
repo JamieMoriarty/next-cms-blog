@@ -1,8 +1,5 @@
 // lib/storyblok.js
-import Page from "@/components/Page";
-import Teaser from "@/components/Teaser";
-import Grid from "@/components/Grid";
-import Feature from "@/components/Feature";
+import { content, nestable } from "@/components/bloks";
 import { apiPlugin, storyblokInit } from "@storyblok/react/rsc";
 
 export const getStoryblokApi = storyblokInit({
@@ -12,9 +9,9 @@ export const getStoryblokApi = storyblokInit({
     region: "eu",
   },
   components: {
-    teaser: Teaser,
-    page: Page,
-    grid: Grid,
-    feature: Feature,
+    page: content.page,
+    feature: nestable.feature,
+    grid: nestable.grid,
+    teaser: nestable.teaser,
   },
 });
