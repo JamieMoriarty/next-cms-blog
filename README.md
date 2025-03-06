@@ -33,7 +33,8 @@ Follow [this guide](https://www.storyblok.com/tp/add-a-headless-cms-to-next-js-1
 We skip the set-up on StoryBlok and focus on the code set-up. So, first install depencies:
 
 ```bash
-npm install storyblok @storyblok/react
+npm install @storyblok/react
+npm install --save-dev storyblok
 ```
 
 This install both the storyblok CLI (used for generating types based on Blok definitions) and the React SDK.
@@ -93,6 +94,19 @@ To generate the typescript file containing Blok shapes add the following to `pac
 
 ```
 "generate:storyblok_types": "storyblok pull-components --space <space-id> && storyblok generate-typescript-typedefs --sourceFilePaths ./components.<space-id>.json --destinationFilePath /path/to/destination"
+```
+
+You probably also want to exclude this generated file from your eslint config:
+
+```javascript
+const eslintConfig = [
+  ...,
+  [
+    {
+      ignores: ["/path/to/generate/file"],
+    },
+  ],
+];
 ```
 
 ## Running
