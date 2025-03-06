@@ -117,6 +117,8 @@ WHEN you set the actual project, remember to add the Sentry configuration! To do
 npx @sentry/wizard@latest -i nextjs --saas --org chill-development --project javascript-nextjs
 ```
 
+### Netlify configuration
+
 ## Running
 
 ### Local developments
