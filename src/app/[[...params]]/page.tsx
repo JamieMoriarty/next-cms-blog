@@ -1,5 +1,8 @@
 import { ISbStoriesParams, StoryblokClient } from "@storyblok/react";
-import { getStoryblokApi } from "@/integrations/storyblok/contentApi";
+import {
+  getContentVersion,
+  getStoryblokApi,
+} from "@/integrations/storyblok/contentApi";
 import { StoryblokStory } from "@storyblok/react/rsc";
 
 export default async function Home() {
@@ -9,7 +12,9 @@ export default async function Home() {
 }
 
 async function fetchData() {
-  const sbParams: ISbStoriesParams = { version: "draft" };
+  const sbParams: ISbStoriesParams = {
+    version: getContentVersion(),
+  };
   const storyblokApi: StoryblokClient = getStoryblokApi();
 
   return storyblokApi.get(`cdn/stories/home`, sbParams);

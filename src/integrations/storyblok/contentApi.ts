@@ -15,3 +15,7 @@ export const getStoryblokApi = storyblokInit({
     teaser: nestable.teaser,
   },
 });
+
+export function getContentVersion() {
+  return process.env.SB_IS_PREVIEW === "true" ? "draft" : "published";
+}
